@@ -1,4 +1,8 @@
-package headfirst.designpatterns.observer.weather;
+package headfirst.designpatterns.observer.weather.Observer;
+
+import headfirst.designpatterns.observer.weather.DisplayElement;
+import headfirst.designpatterns.observer.weather.Observer.Observer;
+import headfirst.designpatterns.observer.weather.subject.WeatherData;
 
 public class ForecastDisplay implements Observer, DisplayElement {
 	private float currentPressure = 29.92f;  

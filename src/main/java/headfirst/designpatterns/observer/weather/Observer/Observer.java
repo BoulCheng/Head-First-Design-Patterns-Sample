@@ -1,5 +1,8 @@
-package headfirst.designpatterns.observer.weather;
+package headfirst.designpatterns.observer.weather.Observer;
 
+/**
+ * 观察者
+ */
 public interface Observer {
 	public void update(float temp, float humidity, float pressure);
 }

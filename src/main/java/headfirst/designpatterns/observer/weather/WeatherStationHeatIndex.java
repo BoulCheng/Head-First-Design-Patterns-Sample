@@ -1,5 +1,11 @@
 package headfirst.designpatterns.observer.weather;
 
+import headfirst.designpatterns.observer.weather.Observer.CurrentConditionsDisplay;
+import headfirst.designpatterns.observer.weather.Observer.ForecastDisplay;
+import headfirst.designpatterns.observer.weather.Observer.HeatIndexDisplay;
+import headfirst.designpatterns.observer.weather.Observer.StatisticsDisplay;
+import headfirst.designpatterns.observer.weather.subject.WeatherData;
+
 public class WeatherStationHeatIndex {
 
 	public static void main(String[] args) {
