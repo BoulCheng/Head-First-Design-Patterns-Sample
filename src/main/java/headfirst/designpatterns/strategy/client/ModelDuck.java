@@ -1,4 +1,7 @@
-package headfirst.designpatterns.strategy;
+package headfirst.designpatterns.strategy.client;
+
+import headfirst.designpatterns.strategy.algorithms1.FlyNoWay;
+import headfirst.designpatterns.strategy.algorithms2.Quack;
 
 public class ModelDuck extends Duck {
 	public ModelDuck() {

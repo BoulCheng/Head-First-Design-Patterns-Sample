@@ -1,4 +1,6 @@
-package headfirst.designpatterns.strategy;
+package headfirst.designpatterns.strategy.algorithms1;
+
+import headfirst.designpatterns.strategy.algorithms1.FlyBehavior;
 
 public class FlyRocketPowered implements FlyBehavior {
 	public void fly() {

@@ -1,5 +1,11 @@
-package headfirst.designpatterns.strategy;
+package headfirst.designpatterns.strategy.client;
 
+import headfirst.designpatterns.strategy.algorithms1.FlyBehavior;
+import headfirst.designpatterns.strategy.algorithms2.QuackBehavior;
+
+/**
+ * 客户
+ */
 public abstract class Duck {
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
