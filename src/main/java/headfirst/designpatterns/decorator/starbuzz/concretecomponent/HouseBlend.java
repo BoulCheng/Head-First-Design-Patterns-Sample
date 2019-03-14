@@ -1,4 +1,6 @@
-package headfirst.designpatterns.decorator.starbuzz;
+package headfirst.designpatterns.decorator.starbuzz.concretecomponent;
+
+import headfirst.designpatterns.decorator.starbuzz.component.Beverage;
 
 public class HouseBlend extends Beverage {
 	public HouseBlend() {

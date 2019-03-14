@@ -1,5 +1,13 @@
 package headfirst.designpatterns.decorator.starbuzz;
 
+import headfirst.designpatterns.decorator.starbuzz.component.Beverage;
+import headfirst.designpatterns.decorator.starbuzz.concretecomponent.DarkRoast;
+import headfirst.designpatterns.decorator.starbuzz.concretecomponent.Espresso;
+import headfirst.designpatterns.decorator.starbuzz.concretecomponent.HouseBlend;
+import headfirst.designpatterns.decorator.starbuzz.concretedecorator.Mocha;
+import headfirst.designpatterns.decorator.starbuzz.concretedecorator.Soy;
+import headfirst.designpatterns.decorator.starbuzz.concretedecorator.Whip;
+
 public class StarbuzzCoffee {
  
 	public static void main(String args[]) {
