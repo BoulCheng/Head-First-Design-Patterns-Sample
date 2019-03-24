@@ -1,5 +1,8 @@
 package headfirst.designpatterns.facade.hometheater;
 
+/**
+ * 外观模式 简化接口
+ */
 public class HomeTheaterFacade {
 	Amplifier amp;
 	Tuner tuner;

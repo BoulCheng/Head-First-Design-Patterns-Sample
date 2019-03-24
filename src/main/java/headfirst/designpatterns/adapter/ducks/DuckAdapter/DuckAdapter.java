@@ -1,4 +1,7 @@
-package headfirst.designpatterns.adapter.ducks;
+package headfirst.designpatterns.adapter.ducks.DuckAdapter;
+import headfirst.designpatterns.adapter.ducks.Duck.Duck;
+import headfirst.designpatterns.adapter.ducks.Turkey.Turkey;
+
 import java.util.Random;
 
 public class DuckAdapter implements Turkey {

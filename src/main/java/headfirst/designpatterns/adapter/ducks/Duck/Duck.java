@@ -1,4 +1,4 @@
-package headfirst.designpatterns.adapter.ducks;
+package headfirst.designpatterns.adapter.ducks.Duck;
 
 public interface Duck {
 	public void quack();

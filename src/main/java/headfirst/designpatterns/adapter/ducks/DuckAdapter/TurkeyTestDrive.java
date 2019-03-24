@@ -1,4 +1,7 @@
-package headfirst.designpatterns.adapter.ducks;
+package headfirst.designpatterns.adapter.ducks.DuckAdapter;
+
+import headfirst.designpatterns.adapter.ducks.Duck.MallardDuck;
+import headfirst.designpatterns.adapter.ducks.Turkey.Turkey;
 
 public class TurkeyTestDrive {
 	public static void main(String[] args) {
