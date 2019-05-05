@@ -1,5 +1,8 @@
 package headfirst.designpatterns.factory.pizzas;
 
+/**
+ * 简单工厂
+ */
 public class SimplePizzaFactory {
 
 	public Pizza createPizza(String type) {

@@ -21,3 +21,10 @@
     - InvocationHandler 实现代理的行为
     - 运行时才将代理类创建出来
     - 代理类继承了Proxy类并实现了代理的接口
+    
+    - 接口代理
+    - 运行时动态生成该接口类对象，(即代理类)，该接口类对象实现了目标接口并继承了Proxy，如果已生成则直接从内存获取
+    - 获得接口代理类构造器参数为 private static final Class<?>[] constructorParams = { InvocationHandler.class }; 的构造器
+    - 通过该构造器根据 Proxy.newProxyInstance 传进来的InvocationHandler参数生成具体的代理类实例对象，即代理对象
+    - 只会根据代理接口生成一个接口类对象(注意不是类的实例对象，也不是要生成的代理对象，而是代理类对象)
+    - 会根据不同InvocationHandler接口的实现生成不同的具体代理类

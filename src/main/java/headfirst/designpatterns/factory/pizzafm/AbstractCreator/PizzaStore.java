@@ -2,6 +2,9 @@ package headfirst.designpatterns.factory.pizzafm.AbstractCreator;
 
 import headfirst.designpatterns.factory.pizzafm.AbstractProduct.Pizza;
 
+/**
+ * 工厂方法模式
+ */
 public abstract class PizzaStore {
  
 	public abstract Pizza createPizza(String item);
