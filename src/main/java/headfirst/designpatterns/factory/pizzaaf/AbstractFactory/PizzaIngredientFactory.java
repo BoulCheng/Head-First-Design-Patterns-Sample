@@ -7,6 +7,9 @@ import headfirst.designpatterns.factory.pizzaaf.ProductFamily.Pepperoni.Pepperon
 import headfirst.designpatterns.factory.pizzaaf.ProductFamily.Sauce.Sauce;
 import headfirst.designpatterns.factory.pizzaaf.ProductFamily.Veggies.Veggies;
 
+/**
+ * 抽象工厂方法模式
+ */
 public interface PizzaIngredientFactory {
  
 	public Dough createDough();
