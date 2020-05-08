@@ -57,3 +57,32 @@
 - 除枚举方式外, 其他方法都会通过反射的方式破坏单例,反射是通过调用构造方法生成新的对象，所以如果我们想要阻止单例破坏，可以在构造方法中进行判断，若已有实例, 则阻止生成新的实例
 
 - 如果单例类实现了序列化接口Serializable, 就可以通过反序列化破坏单例，所以我们可以不实现序列化接口,如果非得实现序列化接口，可以重写反序列化方法readResolve(), 反序列化时直接返回相关单例对象
+
+- 枚举、静态内部类以及饿汉模式来实现单例  都涉及到类的加载和类初始化时类静态变量赋值的过程
+    - 双亲委派保证同一个类加载器加载这些单例类
+    - 类初始化只进行一次（前提是被同一类加载器加载); 类初始化阶段，执行类构造器 <cinit>() 方法;JVM 会保证 <cinit>() 方法的线程安全，保证同一时间只有一个线程执行
+    
+- CAS实现单例
+- 用CAS的好处在于不需要使用传统的锁机制来保证线程安全,CAS是一种基于忙等待的算法,依赖底层硬件的实现,相对于锁它没有线程切换和阻塞的额外消耗,可以支持较大的并行度。
+- CAS的一个重要缺点在于如果忙等待一直执行不成功(一直在死循环中),会对CPU造成较大的执行开销。
+```
+public class Singleton {
+    private static final AtomicReference<Singleton> INSTANCE = new AtomicReference<Singleton>(); 
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        for (;;) {
+            Singleton singleton = INSTANCE.get();
+            if (null != singleton) {
+                return singleton;
+            }
+
+            singleton = new Singleton();
+            if (INSTANCE.compareAndSet(null, singleton)) {
+                return singleton;
+            }
+        }
+    }
+}
+```
