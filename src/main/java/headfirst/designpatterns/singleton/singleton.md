@@ -86,3 +86,4 @@ public class Singleton {
     }
 }
 ```
+- 反射 序列化破坏单例
